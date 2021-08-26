@@ -1,0 +1,18 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "aadvik",
+      "email": "aadvik@fullstackguru.co",
+      "password": "123456",
+      "password2": "123456"
+    },
+    {
+      "name": "aadvik",
+      "email": "aadvik@fullstackguru.co",
+      "password": "123456",
+      "password2": "123456",
+      "id": "QfAh5_X"
+    }
+  ]
+}
