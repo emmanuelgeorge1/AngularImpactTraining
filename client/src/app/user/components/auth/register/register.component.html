@@ -8,43 +8,60 @@
           <div class="form-group">
             <input
               type="text"
-              class="form-control form-control-lg"
+              [ngClass]="{
+                'form-control': true,
+                'form-control-lg': true,
+                'is-invalid': errors.name != null
+              }"
               placeholder="Name"
               name="name"
               required
               [(ngModel)]="register.name"
             />
+            <div class="d-block invalid-feedback">{{ errors.name }}</div>
           </div>
+
           <div class="form-group">
             <input
               type="email"
-              class="form-control form-control-lg"
+              [ngClass]="{
+                'form-control': true,
+                'form-control-lg': true,
+                'is-invalid': errors.name != null
+              }"
               placeholder="Email Address"
               name="email"
               [(ngModel)]="register.email"
             />
-            <small className="form-text text-muted"
-              >This site uses Gravatar so if you want a profile image, use a
-              Gravatar email</small
-            >
+            <div class="d-block invalid-feedback">{{ errors.email }}</div>
           </div>
           <div class="form-group">
             <input
               type="password"
-              class="form-control form-control-lg"
+              [ngClass]="{
+                'form-control': true,
+                'form-control-lg': true,
+                'is-invalid': errors.name != null
+              }"
               placeholder="Password"
               name="password"
               [(ngModel)]="register.password"
             />
+            <div class="d-block invalid-feedback">{{ errors.password }}</div>
           </div>
           <div class="form-group">
             <input
               type="password"
-              class="form-control form-control-lg"
+              [ngClass]="{
+                'form-control': true,
+                'form-control-lg': true,
+                'is-invalid': errors.name != null
+              }"
               placeholder="Confirm Password"
               name="password2"
               [(ngModel)]="register.password2"
             />
+            <div class="d-block invalid-feedback">{{ errors.password2 }}</div>
           </div>
           <input type="submit" class="btn btn-info btn-block mt-4" />
         </form>

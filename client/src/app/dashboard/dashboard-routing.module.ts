@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UserDashboardComponent } from './user-dashboard/components/user-dashboard/user-dashboard.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       import('./user-dashboard/user-dashboard.module').then((m) => {
         m.UserDashboardModule;
       }),
+  },
+  {
+    path: 'user-dashboard',
+    component: UserDashboardComponent,
   },
 ];
 
