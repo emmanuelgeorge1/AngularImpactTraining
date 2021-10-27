@@ -6,10 +6,9 @@ import {
   HttpInterceptor,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import jwtDecode from 'jwt-decode';
 
 @Injectable()
-export class TokenInterceptor implements HttpInterceptor {
+export class LoggerInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(
@@ -17,9 +16,8 @@ export class TokenInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     if (localStorage.getItem('token')) {
-      const decoded = JSON.parse(jwtDecode(localStorage.getItem('token')));
+      console.log('token is stored in');
     }
-
     return next.handle(request);
   }
 }

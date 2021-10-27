@@ -9,9 +9,7 @@ import { Register } from 'src/app/user/model/register';
 })
 export class UserDashboardComponent implements OnInit {
   profile: any = {};
-  userDetail: Register = JSON.parse(
-    localStorage.getItem('userDetails') || '{}'
-  );
+  userDetail: Register = JSON.parse(localStorage.getItem('userDetails'));
   constructor(private profileService: ProfileService) {}
 
   ngOnInit(): void {
